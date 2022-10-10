@@ -1,14 +1,14 @@
 {
   "name": "lalibertyc",
   "version": "0.0.0",
-  "homepage": "https://clarahlt.github.io/Laliberty.c/index.html",
+  "homepage": "https://clarahlt.github.io/ProjectLiberty/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 4173",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "git": "npm run build && git add . && git commit -m",
-    "postgit": "git push && git subtree push --prefix dist LalibertyC gh-pages"
+    "postgit": "git push && git subtree push --prefix dist pLiberty gh-pages"
   },
   "dependencies": {
     "@fawmi/vue-google-maps": "^0.9.79",

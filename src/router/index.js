@@ -10,6 +10,7 @@ const router = createRouter({
       component: HomeView,
     },
   ],
+  base: 'https://clarahlt.github.io/ProjectLiberty/'
 });
 
 export default router;
