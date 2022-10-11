@@ -152,6 +152,7 @@ export default {
   min-height: 100vh;
 }
 #navbar {
+  z-index: 1;
   animation: fadein 2s;
 }
 

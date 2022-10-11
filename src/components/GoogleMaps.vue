@@ -15,10 +15,8 @@
   background-size: cover;
   height: 100vh;
   position: absolute;
-  top: 0;
-  width: 112%;
   z-index: -1;
-
+  width: 98vw;
  }
   </style>
   

@@ -5,26 +5,18 @@
 </template>
 
 <script>
-import ComponentWithMap from './components/GoogleMaps.vue'
-import WhoIAm from "./components/whoIAm.vue";
 export default {
   name: "App",
-  components: {
-    WhoIAm,
-    ComponentWithMap,
-  },
 };
 </script>
 
-<style lang="scss">
+<style scopedlang="scss">
 html {
   height: 100%;
+  overflow-x: hidden;
 }
 body {
   min-height: 100%;
   width: 100%;
-}
-#home {
-  min-height: 100vh;
 }
 </style>

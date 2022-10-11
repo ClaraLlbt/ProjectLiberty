@@ -14,7 +14,7 @@
         </div>
 
         <div type="" class="arrow">
-          <a href="#contactMe"><i class="bi bi-caret-down"></i></a>
+          <a href="#contactme"><i class="bi bi-caret-down"></i></a>
         </div>
 
       </div>

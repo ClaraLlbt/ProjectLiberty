@@ -1,12 +1,10 @@
 <template>
-    <div id="contactMe" class="contact-me">
-        <div class="map-image">
-            <ComponentWithMap />
-        </div>
+    <div id="contactMe" class="container contact-container">
         
-        <div class="contact-container">
+        <div class="container-contact-with-map">
+            <ComponentWithMap class="map-image" />
            <div class="row">
-                <div class="content-contact">
+                <div class="col-3 content-contact">
                     <div class="title-contact">
                         <p>N'hésitez pas</p>
                         <p class="p-bold">Contactez-moi</p>
@@ -20,7 +18,7 @@
                     </div>
                 </div>
 
-                <div id="form-slide" class="content-form form-slide">
+                <div class="col-4 content-form form-slide" id="form-slide">
                 <div class="contact-form">
                     <form action="">
                         <h4>Formulaire de contact</h4>
@@ -69,61 +67,67 @@
 
 
 <style lang="scss">
-
-.contact-me{
-    width: 100%;
-    transform: translateX(-79px);
-}
-.content-contact{
-        width: 25%;
-        background: #4a5b71;
-        color: white;
+.contact-container{
+    .container-contact-with-map{
+        height: 100vh;
         position: absolute;
-        top: 150px;
-        left: 10%;
-        padding: 30px;
-        .title-contact{
-            margin-bottom: 50px;
-            font-size: 20px;
-            p{
-                margin: 0;
+        top: 0;
+        left: -100px;
+        width: 99vw;
+        .row{
+            overflow: hidden;
+            .content-contact{
+                background: #4a5b71;
+                color: white;
+                position: absolute;
+                top: 150px;
+                left: 10%;
+                padding: 30px;
+                .title-contact{
+                    margin-bottom: 50px;
+                    font-size: 20px;
+                    p{
+                        margin: 0;
+                    }
+                    .p-bold{
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+                }
+                .btn{
+                    button{
+                        margin: 20px;
+                    } 
+                }
             }
-            .p-bold{
-                font-weight: bold;
-                text-transform: uppercase;
+            .content-form{
+                width: 30%;
+                background: #4a5b71;
+                color: white;
+                padding: 30px;
+                height: 100vh;
+                display: grid;
+                align-content: center;
+                h4{
+                    font-weight: bold;
+                }
+                .button{
+                    text-align: center;
+                    margin: 40px;
+                }
+            }
+            .form-slide{
+                transform: translateX(1260px);
+                opacity: 0;
+                transition: transform 0.6s ease-in-out,
+                opacity 0.6s ease-in-out;
+            }
+            .form-slide.activeBtn{
+                transform: translateX(960px);
+                opacity: 1;
             }
         }
-        .btn{
-            button{
-                margin: 20px;
-            }
-        }
     }
-    .content-form{
-    width: 30%;
-    background: #4a5b71;
-    color: white;
-    padding: 30px;
-    height: 100vh;
-    display: grid;
-    align-content: center;
-    h4{
-        font-weight: bold;
-    }
-    .button{
-        text-align: center;
-        margin: 40px;
-    }
-}
-.form-slide{
-    transform: translateX(1370px);
-    opacity: 0;
-    transition: transform 0.6s ease-in-out,
-    opacity 0.6s ease-in-out;
-}
-.form-slide.activeBtn{
-    transform: translateX(1001px);
-    opacity: 1;
 }
 
 </style>
