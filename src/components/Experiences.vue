@@ -1,6 +1,5 @@
 <template>
-
-  <div class="container">
+  <div id="experiences" class="row experiences-container">
     <div class="background-color-works"></div>
     <!-- Global row -->
     <div class="row global-row">
@@ -190,7 +189,8 @@
       <!-- icon-jobs -->
       <div class="col-md-3 jobs-icon"><i class="bi bi-briefcase-fill"></i></div>
       </div>
-      <div class="row">
+
+      <div class="row ">
         <div type="" class="arrow">
           <a href="#works"><i class="bi bi-caret-down"></i></a>
         </div>
@@ -205,6 +205,7 @@
     name: "experiences",
     mounted() {
       this.mouseEffect()
+      this.slideBloc2()
     },
     methods: {
       mouseEffect(){
@@ -219,24 +220,39 @@
             }
           }
         }
-      }
+      },
+      slideBloc2(){
+      const blocSlide1 = document.querySelector('.certificate');
+      const blocSlide2 = document.querySelector('.jobs');
+
+      window.addEventListener('scroll', () => { 
+        const { scrollTop, scrollHeight ,clientHeight} = document.documentElement;
+        const topElementToTopViewport = blocSlide1.getBoundingClientRect().top
+        if(scrollTop > (scrollTop + topElementToTopViewport).toFixed() - clientHeight * 0.30){
+          blocSlide1.classList.add('active');
+          blocSlide2.classList.add('active2')
+        }
+      });
     }
+  }
   }
 </script>
 
 <style lang="scss">
-.container{
+.row{
   .background-color-works{
-      background: linear-gradient(90deg, #E1DFD3, transparent);
+      background: linear-gradient(90deg, #F8F8F8, transparent);
       width: 100%;
       position: absolute;
       left: -110px;
       height: 100vh;
-      top: -11px;
   }
   .global-row{
-    height: 100vh;
     align-content: space-around;
+    @media (max-width: 776px) {
+      padding: 0;
+      margin: auto;
+    }
     .certificate-icon, .jobs-icon{
       font-size: 100px;
       text-align: center;
@@ -245,10 +261,17 @@
       }
     }
     .certificate, .jobs{
+      @media (max-width: 776px) {
+        padding: 0;
+        margin: 0;
+      }
       .cards-design{
         align-content: baseline;
         .card{
           color: white;
+          @media (max-width: 776px) {
+            margin-bottom: 15px;
+          }
           .card-header{
             height: 60px;
             h4{
@@ -314,6 +337,9 @@
     }
   }
   .jobs{
+    @media (max-width: 776px) {
+      flex-direction: column-reverse;
+    }
     .cards-design{
       .card{
         background: #4A5B71;
@@ -333,6 +359,43 @@
       }
     }
   }
+
+  .certificate{
+    transform: translateX(120%);
+    opacity: 0;
+    transition: transform 2s ease-in-out,
+    opacity 0.6s ease-in-out;
   }
+  .certificate.active{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  .jobs{
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 2s ease-in-out,
+    opacity 0.6s ease-in-out;
+  }
+  .jobs.active2{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+
+  }
+  .arrow {
+  text-align: center;
+  margin-top: -10px;
+  a {
+    &:hover {
+      background-color: unset;
+    }
+    i {
+      font-size: 50px;
+      &:hover {
+        background-color: hsla(160, 100%, 37%, 0.2);
+      }
+    }
+  }
+}
 }
 </style>

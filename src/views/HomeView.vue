@@ -1,5 +1,6 @@
 <template>
-  <div id="home" class="hdr-container">
+  <div class="app-container container-fluid">
+    <div id="home" class="row hdr-container">
     <div class="row animation_name">
       <div class="col-md-5 col-sm-5 letters" id="letters">
         <div class="nameC" id="letters">C</div>
@@ -12,9 +13,10 @@
         <i class="bi bi-brightness-low-fill"></i>
       </div>
 
-      <div class="col-md-5 lastName" id="letters">LALIBERTÉ</div>
+      <div class="col-md-5 lastName lastname-letters" id="letters">LALIBERTÉ</div>
     </div>
-    <div id="button" @click="displayNavbar" type="button" class="arrow-ico">
+
+    <div id="button" class="row arrow-ico" @click="displayNavbar" type="button">
       <a href="#about"><i class="bi bi-arrow-down"></i></a>
     </div>
   </div>
@@ -22,13 +24,14 @@
 
   <Navbar id="navbar" v-if="revele" />
 
-  <HardSkills id="hardSkills" />
+  <HardSkills id="hardskills" />
 
   <Experiences id="experiences" />
 
   <Works id="works" />
 
   <ContactMe id="contactme"/>
+  </div>
 
 </template>
 
@@ -82,18 +85,24 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
-  font-family: "Source Code Pro", monospace;
-  width: 100%;
+#home, #about, #hardskills, #experiences, #works, #contactme{
+  height: 100vh;
+  @media (max-width: 776px ) {
+    height: auto;
+  }
 }
 .hdr-container {
   font-family: "Source Code Pro", monospace;
-  min-height: 100vh;
   display: grid;
+  @media (max-width: 776px) {
+    align-content: start;
+  }
   .animation_name {
     align-items: center;
     align-self: flex-end;
-
+    @media (max-width: 776px){
+      align-self: flex-start;
+    }
     .ico {
       text-align-last: center;
       font-size: 150px;
@@ -128,6 +137,9 @@ export default {
       opacity: 0;
       text-align-last: center;
       letter-spacing: 25px;
+      @media (max-width: 776px){
+        letter-spacing: 0px;
+      }
     }
   }
   .arrow-ico {
@@ -136,29 +148,11 @@ export default {
     font-size: 90px;
   }
 }
-#about {
-  min-height: 100vh;
-}
-
-#hardSkills {
-  min-height: 100vh;
-}
-
-#works {
-  min-height: 100vh;
-}
-
-#experiences {
-  min-height: 100vh;
-}
 #navbar {
   z-index: 1;
   animation: fadein 2s;
 }
 
-#contactme{
-  min-height: 100vh;
-}
 
 @keyframes fadein {
   from {

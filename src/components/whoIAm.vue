@@ -1,15 +1,12 @@
 <template>
-  <div id="about">
-    <div class="background-color"></div>
-    <div class="row about-me">
-      
-      <div class="col-md-6 profile">
-        <div class="image-profile">
-          <img src="../assets/images/chibi.png" alt="">
-        </div>
+  <div id="about" class="row about-me">
+    <div class="col-md-6 profile">
+      <div class="image-profile">
+        <img src="../assets/images/chibi.png" alt="">        
+      </div>
         <div class="button">
           <button id="buttonHS" class="btn btn-light">
-            <a href="#hardSkills">Découvrir mes compétences</a>
+            <a href="#hardskills">Découvrir mes compétences</a>
           </button>
         </div>
       </div>
@@ -28,18 +25,17 @@
         </p>
         <div class="hobbies-container">
           <div class="row hobbies-icons">
-            <div class="col-md-2 icon-1"><i class="bi bi-brush"></i></div>
-            <div class="col-md-2 icon-2"><i class="bi bi-tools"></i></div>
+            <div class="col-2 icon-1"><i class="bi bi-brush"></i></div>
+            <div class="col-2 icon-2"><i class="bi bi-tools"></i></div>
               
-            <div class="col-md-2 icon-3"><i class="bi bi-tree"></i></div>
-            <div class="col-md-2 icon-4"><i class="bi bi-flower1"></i></div>
+            <div class="col-2 icon-3"><i class="bi bi-tree"></i></div>
+            <div class="col-2 icon-4"><i class="bi bi-flower1"></i></div>
               
-            <div class="col-md-2 icon-5"><i class="bi bi-code-slash"></i></div>
-            <div class="col-md-2 icon-6"><i class="bi bi-controller"></i></div>
+            <div class="col-2 icon-5"><i class="bi bi-code-slash"></i></div>
+            <div class="col-2 icon-6"><i class="bi bi-controller"></i></div>
           </div>
         </div>
       </div>
-    </div>
   </div>
 </template>
 
@@ -86,10 +82,8 @@
   };
 </script>
 
-<style lang="scss">
-#about{
+<style scoped lang="scss">
   .about-me{
-    
     background-image: url("../assets/images/dots-bg.png");
     .profile{
       text-align: center;
@@ -150,7 +144,7 @@
       }
     }
   }
-}
+
 
 // KEYFRAMES 
 

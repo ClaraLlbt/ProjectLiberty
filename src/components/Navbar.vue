@@ -13,12 +13,12 @@
             ></a>
           </li>
           <li class="nav-item bg-light">
-            <a class="nav-link" href="#hardSkills"
+            <a class="nav-link" href="#hardskills"
               ><i class="bi bi-gear-fill"></i
             ></a>
           </li>
           <li class="nav-item bg-light">
-            <a class="nav-link" href="#education"
+            <a class="nav-link" href="#experiences"
               ><i class="bi bi-mortarboard-fill"></i
             ></a>
           </li>

@@ -16,7 +16,7 @@
   height: 100vh;
   position: absolute;
   z-index: -1;
-  width: 98vw;
+  width: 101vw;
  }
   </style>
   

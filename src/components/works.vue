@@ -1,13 +1,12 @@
 <template>
-  <div id="projects-container" class="container works-container">
+  <div id="projects-container" class="row works-container">
 
     <div class="row global-row">
-
       <!-- About Projects -->
-      <div class="col-3">
+      <div class="col-md-3 about-projects">
 
-        <div class="about-works">
-          <h4>Projets</h4>
+        <div class="content-projects">
+          <h3>Projets</h3>
           <p>Je vous présente les projets que j'ai réalisé lors de ma formation de Développeur Web
             Si vous souhaitez en discuter, je vous propose de me contacter.
           </p>
@@ -20,242 +19,177 @@
       </div>
 
       <!-- Projects Bloc -->
-      <div class="col-9 projects">
+      <div class="col-md-9 projects">
+        <!-- Bootstrap Horizontal Carousel  -->
+        <div  id="horizontalCarousel" class="carousel carousel-horizontal carousel-dark" data-bs-ride="false">
+          <!--Carousel indicators-->
 
-        <div class="row projects-line-row">
+          <!--Horizontal Carousel content-->
+          <div class="carousel-inner horizontal">
+            
 
-          <div id="myCarousel" class="carousel slide col-md-3 card" data-bs-ride="carousel" data-bs-interval="2000">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img id="carousel" class="w-100" src="../assets/images/carousel/logo_reservia.png" alt=""/>
+            <!--Carousel Projects Items-->
+            <div class="carousel-item horizontal active">
+              <div class="row project-row">
+                <div class="col-6 col-carousel">
+                  <!--CSS Carousel Vertical-->
+                  <div id="verticalCarousel" class="carousel vertical slide">
+                    <figure>
+                      <img src="../assets/images/carousel/logo_reservia.png" class="w-100" alt="">
+                      <img src="../assets/images/carousel/reservia_page.png" class="w-100" alt="">
+                      <img src="../assets/images/carousel/responsive_version.png" class="w-100" alt="">
+                    </figure>
+                  </div>
+                </div>
+                <div class="col-6 col-about-project">
+                  <div class="title-project">
+                    <h6>- PROJET 1 -</h6>
+                    <p>Transformer une maquette en site Web avec HTML & CSS</p>
+                  </div>
+                  <div type="" class="arrow-link">
+                    <a href="https://clarahlt.github.io/HaultcoeurClara-2-02112020/"><p>Découvrir</p> 
+                      <i class="bi bi-link"></i>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="carousel-item">
-                <img id="carousel" class="w-100" src="../assets/images/carousel/responsive_version.png" alt=""/>
-              </div>
-              <div class="carousel-item">
-                <img id="carousel" class="w-100" src="../assets/images/carousel/reservia_page.png" alt=""/>
-              </div>
-            </div>
-            <div id="display-link" class="display-link">
-              <div class="about">
-                <p>Transformer une maquette en site Web avec HTML & CSS</p>
-              </div>
-              <div class="git-link">
-                <a href="https://clarahlt.github.io/HaultcoeurClara-2-02112020/"><i class="bi bi-link"></i></a>
-              </div>
-            </div>
-          </div>
 
-          <div id="myCarousel" class="carousel slide col-md-3 card" data-bs-ride="carousel" data-bs-interval="1500">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img id="carousel" class="d-block w-100" src="../assets/images/carousel/logo_ohmyfood.png" alt=""/>
-              </div>
-              <div class="carousel-item">
-                <img id="carousel" class="d-block w-100" src="../assets/images/carousel/ohmyfood_p1.png" alt=""/>
-              </div>
-              <div class="carousel-item">
-                <img id="carousel" class="d-block w-100" src="../assets/images/carousel/ohmyfood_p2.png" alt=""/>
-              </div>
             </div>
-            <div id="display-link" class="display-link">
-              <div class="about">
-                <p>Dynamiser une page web avec des animations CSS</p>
+            <div class="carousel-item horizontal">
+              <div class="row project-row">
+                <div class="col-6 col-carousel">
+                  <!--Carousel Vertical-->
+                  <div id="verticalCarousel" class="carousel vertical slide">
+                    <figure>
+                      <img src="../assets/images/carousel/logo_ohmyfood.png" class="w-100" alt="">
+                      <img src="../assets/images/carousel/ohmyfood_p1.png" class="w-100" alt="">
+                      <img src="../assets/images/carousel/ohmyfood_p2.png" class="w-100" alt="">
+                    </figure>
+                  </div>
+                </div>
+                <div class="col-6 col-about-project">
+                  <div class="title-project">
+                    <h6>- PROJET 2 -</h6>
+                    <p>Dynamiser une page web avec des animations CSS</p>
+                  </div>
+                  <div type="" class="arrow-link">
+                    <a href="https://clarahlt.github.io/HaultcoeurClara-3-28022020/"><p>Découvrir</p> 
+                      <i class="bi bi-link"></i>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="git-link">
-                <a href=""><i class="bi bi-link"></i></a>
-              </div>
-            </div>
-          </div>
 
-          <div id="myCarousel" class="carousel slide col-md-3 card" data-bs-ride="carousel" data-bs-interval="2000">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img id="carousel" class="d-block w-100" src="../assets/images/carousel/logo_orinoco.png" alt=""/>
-              </div>
-              <div class="carousel-item">
-                <img id="carousel" class="d-block w-100" src="../assets/images/carousel/orinoco_p1.png" alt=""/>
-              </div>
-              <div class="carousel-item">
-                <img id="carousel" class="d-block w-100" src="../assets/images/carousel/orinoco_p2.png" alt=""/>
-              </div>
-              <div class="carousel-item">
-                <img id="carousel" class="d-block w-100" src="../assets/images/carousel/orinoco_p3.png" alt=""/>
-              </div>
-              <div class="carousel-item">
-                <img id="carousel" class="d-block w-100" src="../assets/images/carousel/orinoco_p4.png" alt=""/>
-              </div>
             </div>
-            <div id="display-link" class="display-link">
-              <div class="about">
-                <p>Construire un site E-commerce</p>
+            <div class="carousel-item horizontal">
+              <div class="row project-row">
+                <div class="col-6 col-carousel">
+                  <!--Carousel Vertical-->
+                  <div id="verticalCarousel" class="carousel vertical slide">
+                    <figure>
+                      <img src="../assets/images/carousel/logo_orinoco.png" class="w-100" alt="">
+                      <img src="../assets/images/carousel/orinoco_p1.png" class="w-100" alt="">
+                      <img src="../assets/images/carousel/orinoco_p2.png" class="w-100" alt="">
+                    </figure>
+                  </div>
+                </div>
+                <div class="col-6 col-about-project">
+                  <div class="title-project">
+                    <h6>- PROJET 3 -</h6>
+                    <p>Construire un site E-commerce</p>
+                  </div>
+                  <div type="" class="arrow-link">
+                    <a href="https://clarahlt.github.io/Orinoco/"><p>Découvrir</p> 
+                      <i class="bi bi-link"></i>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="git-link">
-                <a href=""><i class="bi bi-link"></i></a>
-              </div>
-            </div>
-          </div>
 
-          <div id="myCarousel" class="carousel slide col-md-3 card" data-bs-ride="carousel" data-bs-interval="1500">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img id="carousel" class="d-block w-100" src="../assets/images/carousel/logo_piquante.png" alt=""/>
-              </div>
-              <div class="carousel-item">
-                <img id="carousel" class="d-block w-100" src="../assets/images/carousel/piquante_p1.png" alt=""/>
-              </div>
-              <div class="carousel-item">
-                <img id="carousel" class="d-block w-100" src="../assets/images/carousel/piquante_p2.png" alt=""/>
-              </div>
-              <div class="carousel-item">
-                <img id="carousel" class="d-block w-100" src="../assets/images/carousel/logo_flamme_piquante.png" alt=""/>
-              </div>
             </div>
-            <div id="display-link" class="display-link">
-              <div class="about">
-                <p>Construire une API sécurisée oour une application</p>
+            <div class="carousel-item horizontal" >
+              <div class="row project-row">
+                <div class="col-6 col-carousel">
+                  <!--Carousel Vertical-->
+                  <div id="verticalCarousel" class="carousel vertical slide">
+                    <figure>
+                      <img src="../assets/images/carousel/logo_piquante.png" class="w-100" alt="">
+                      <img src="../assets/images/carousel/piquante_p1.png" class="w-100" alt="">
+                      <img src="../assets/images/carousel/piquante_p2.png" class="w-100" alt="">
+                    </figure>
+                  </div>
+                </div>
+                <div class="col-6 col-about-project">
+                  <div class="title-project">
+                    <h6>- PROJET 4 -</h6>
+                    <p>Construire une API sécurisée oour une application</p>
+                  </div>
+                  <div type="" class="arrow-link">
+                    <a href="https://clarahlt.github.io/PIIQUANTE/"><p>Découvrir</p> 
+                      <i class="bi bi-link"></i>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="git-link">
-                <a href=""><i class="bi bi-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="row projects-line-row">
-          <div id="myCarousel" class="carousel slide col-md-3 card" data-bs-ride="carousel" data-bs-interval="1500">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img id="carousel" class="d-block w-100" src="../assets/images/carousel/logo_lachouetteagence.png" alt=""/>
-              </div>
-              <div class="carousel-item">
-                <img id="carousel" class="d-block w-100" src="../assets/images/carousel/lachouetteagence_p1.png" alt=""/>
-              </div>
-              <div class="carousel-item">
-                <img id="carousel" class="d-block w-100" src="../assets/images/carousel/lachouetteagence_p2.png" alt=""/>
-              </div>
-              <div class="carousel-item">
-                <img id="carousel" class="d-block w-100" src="../assets/images/carousel/SEO.png" alt=""/>
-              </div>
             </div>
-            <div id="display-link" class="display-link">
-              <div class="about">
-                <p>Créer un réseau social d'entreprise</p>
+            <div class="carousel-item horizontal" >
+              <div class="row project-row">
+                <div class="col-6 col-carousel">
+                  <!--Carousel Vertical-->
+                  <div id="verticalCarousel" class="carousel vertical slide">
+                    <figure>
+                      <img src="../assets/images/carousel/logo_groupomania.png" class="w-100" alt="">
+                      <img src="../assets/images/carousel/groupomania-p1.png" class="w-100" alt="">
+                      <img src="../assets/images/carousel//groupomania_p2.png" class="w-100" alt="">
+                    </figure>
+                  </div>
+                </div>
+                <div class="col-6 col-about-project">
+                  <div class="title-project">
+                    <h6>- PROJET 5 -</h6>
+                    <p>Créer un réseau social d'entreprise</p>
+                  </div>
+                  <div type="" class="arrow-link">
+                    <a href="https://clarahlt.github.io/HaultcoeurClara-2-02112020/"><p>Découvrir</p> 
+                      <i class="bi bi-link"></i>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="git-link">
-                <a href=""><i class="bi bi-link"></i></a>
-              </div>
-            </div>
-          </div>
 
-          <div id="myCarousel" class="carousel slide col-md-3 card" data-bs-ride="carousel" data-bs-interval="2000">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="color-carousel">
-                <img id="carousel" class="d-block w-100" src="" alt=""/>
-              </div>
-              </div>
-              <div class="carousel-item active">
-                <img id="carousel" class="d-block w-100" src="../assets/images/carousel/logo_groupomania.png" alt=""/>
-              </div>
-              <div class="carousel-item">
-                <img id="carousel" class="d-block w-100" src="../assets/images/carousel/groupomania-p1.png" alt=""/>
-              </div>
-              <div class="carousel-item">
-                <img id="carousel" class="d-block w-100" src="../assets/images/carousel/groupomania_p2.png" alt=""/>
-              </div>
-              <div class="carousel-item">
-                <img id="carousel" class="d-block w-100" src="../assets/images/carousel/groupomania_p3.png" alt=""/>
-              </div>
-            </div>
-            <div id="display-link" class="display-link">
-              <div class="about">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero possimus nostrum commodi impedit repudiandae provident</p>
-              </div>
-              <div class="git-link">
-                <a href=""><i class="bi bi-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div id="myCarousel" class="carousel slide col-md-3 card" data-bs-ride="carousel" data-bs-interval="1500">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img id="carousel" class="d-block w-100" src="../assets/images/dots-bg.png" alt=""/>
-              </div>
-              <div class="carousel-item">
-                <img id="carousel" class="d-block w-100"  src="../assets/images/dots-bg.png" alt=""/>
-              </div>
-            </div>
-            <div id="display-link" class="display-link">
-              <div class="about">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero possimus nostrum commodi impedit repudiandae provident</p>
-              </div>
-              <div class="git-link">
-                <a href=""><i class="bi bi-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div id="myCarousel" class="carousel slide col-md-3 card" data-bs-ride="carousel" data-bs-interval="2000">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img id="carousel" class="d-block w-100"  src="../assets/images/dots-bg.png" alt=""/>
-              </div>
-              <div class="carousel-item">
-                <img id="carousel" class="d-block w-100"  src="../assets/images/dots-bg.png" alt=""/>
-              </div>
-            </div>
-            <div id="display-link" class="display-link">
-              <div class="about">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero possimus nostrum commodi impedit repudiandae provident</p>
-              </div>
-              <div class="git-link">
-                <a href=""><i class="bi bi-link"></i></a>
-              </div>
             </div>
             
           </div>
 
+          <!--Btn preview/next-->
+          <button class="carousel-control-prev" type="button" data-bs-target="#horizontalCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#horizontalCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
         </div>
+
       </div>
+
     </div>
   </div>
 </template>
 
+
 <script>
+
 
 export default {
   name: "works",
-  mounted() {
-    this.displayProjects() 
+  mounted(){
+
   },
-  methods: {
-    displayProjects(){
-      const carousel = document.getElementsByClassName('carousel')
-        for(let i = 0; i < carousel.length; i++){
-          carousel[i].addEventListener('mouseover', display);
-          carousel[i].addEventListener("mouseout", displayNone);
-            function display(){
-              const displayLink = carousel[i].lastElementChild;
-              const carouselInner = carousel[i].firstChild;
-              if(displayLink.clicked = true){
-                displayLink.style.display =  "block";
-                carouselInner.style.display = "none"
-
-              }
-            }
-            function displayNone(){
-              const displayNLink = carousel[i].lastElementChild;
-              const carouselInner = carousel[i].firstChild;
-              if(displayNLink.mouseout = true){
-                displayNLink.style.display =  "none";
-                carouselInner.style.display= "";
-
-              }
-            }
-        }      
-    },
+  methods:{
+  
   }
 };
 </script>
@@ -264,27 +198,75 @@ export default {
 .works-container {
   .global-row {
     align-self: center;
-    .projects{
-      height: 100vh;
-      position: absolute;
-      right: -105px;
-      .projects-line-row{
-        height: 50%;
+    align-items: center;
+    width: 100vw;
+    .content-projects{
+      p{
+        font-weight: bold;
       }
-      #myCarousel {
-      position: relative;
-      place-content: center;
-      text-align: center;
-      border: 1px solid lightgrey;
-      border-radius: 0;
-      filter:brightness(0.5) blur(1px);
-          &:hover{
-            filter: none;
-          }
-          .display-link{
-            display: none;
-          }
     }
+    .projects{
+      height: 85vh;
+      #horizontalCarousel{
+        height: 100%;
+        .carousel-inner.horizontal{
+          .carousel-item.horizontal{
+            .project-row{
+              align-items: center;
+              text-align-last: center;
+              width: 80%;
+              height: 85vh;
+              margin: auto;
+              h6{
+                font-weight: bold;
+                font-size: 25px;
+                color: rosybrown;
+              }
+              p{
+                font-weight: bold;
+              }
+              .arrow-link{
+                p{
+                  margin-bottom: -20px;
+                  font-size: 30px;
+                }
+                i{
+                  font-size: 40px;
+                }
+              }
+            }
+          }
+        }
+        .carousel-indicators{
+          margin-bottom: 0px;
+        }
+      }
+      #verticalCarousel{
+            border: 35px rosybrown solid;
+            overflow: hidden;
+            height: 66vh;
+            figure{
+              position: relative;
+              width: 100%;
+              margin: 0;
+              top: 0;
+              text-align: center;
+              animation: 15s slidy infinite; 
+             
+            }
+        }
+        @keyframes slidy {
+0% { top: 0%; }
+30% { top: 0%; }
+35% { top: -102%; }
+45% { top: -102%; }
+50% { top: -102%; }
+70% { top: -102%; }
+75% { top: -204%; }
+95% { top: -204%; }
+100% { top: -204%; }
+}
+
     }
   }
 }

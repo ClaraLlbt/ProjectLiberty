@@ -1,7 +1,6 @@
 <template>
-  <div class="container">
-    <div class="row HS-container">
-      <div class="col-md" id="skills">
+    <div id="hardskills" class="row hardskills-container">
+      <div class="col" id="skills">
         <div class="row development bloc-1">
           <div class="col-md-4 code-icon icon-1">
             <i id="icon1-color" class="bi bi-code"></i>
@@ -49,17 +48,16 @@
             <p>Bureautique : Google Drive/Microsoft Office/Libre Office</p>
           </div>
         </div>
+        <div class="row arrow" type="">
+          <a href="#experiences"><i class="bi bi-caret-down"></i></a>
+        </div>
       </div>
     </div>
-    <div type="" class="arrow">
-      <a href="#experiences"><i class="bi bi-caret-down"></i></a>
-    </div>
-  </div>
 </template>
 
 <script>
 export default {
-  name: "hardSkills",
+  name: "hardskills",
   mounted() {
     this.slideBloc()
   },
@@ -84,10 +82,13 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.HS-container {
+<style scoped lang="scss">
+.hardskills-container {
   align-content: center;
   padding: 30px 30px 0px 30px;
+  @media (max-width: 776px) {
+    padding: 0px;
+  }
 }
 #skills {
   #icon1-color {
@@ -107,7 +108,7 @@ export default {
     }
     .dev-skills {
       padding: 15px;
-      background: #E1DFD3;
+      background: #F8F8F8;
       border-radius: 10px;
       height: 60%;
       align-self: center;
@@ -117,6 +118,10 @@ export default {
       p {
         margin-bottom: 0;
         font-weight: bold;
+        @media (max-width: 776px){
+          overflow-wrap: break-word;
+          font-size: 12px;
+        }
       }
     }
   }
@@ -135,6 +140,9 @@ export default {
     opacity: 0;
     transition: transform 2s ease-in-out,
     opacity 0.6s ease-in-out;
+    @media (max-width: 776px){
+      flex-direction: column-reverse;
+    }
   }
   .bloc-2.active2{
     transform: translateX(0%);
