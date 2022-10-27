@@ -90,6 +90,9 @@
                 background: #4a5b71;
                 color: white;
                 padding: 30px;
+                @media (max-width: 776px) {
+                        height: 100vh;
+                    }
                 .title-contact{
                     margin-bottom: 50px;
                     font-size: 20px;
@@ -142,12 +145,22 @@
                 }
             }
             .form-slide.activeBtn{
-                transform: translateX(350px);
+                transform: translateX(345px);
                 opacity: 1;
+                @media (max-width: 1020px){
+                    transform: translateX(300px);
+                }
+                @media (min-width: 1600px){
+                    transform: translateX(402px);
+                }
+                @media (min-width: 1920px){
+                    transform: translateX(435px);
+                }
                 @media (max-width: 776px) {
-                    transform: matrix(1, 0, 0, 1, 0, -280);
+                    transform: matrix(1, 0, 0, 1, 0, -405);
                     opacity: 1;
                 }
+                
             }
         }
     }

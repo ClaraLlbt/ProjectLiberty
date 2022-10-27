@@ -13,7 +13,7 @@
         <i class="bi bi-brightness-low-fill"></i>
       </div>
 
-      <div class="col-md-5 lastName lastname-letters" id="letters">LALIBERTÉ</div>
+      <div class="col-md-5 lastName lastname-letters" id="letters"><p>LALIBERTÉ</p></div>
     </div>
 
     <div id="button" class="row arrow-ico" @click="displayNavbar" type="button">
@@ -22,7 +22,7 @@
   </div>
   <WhoIAm id="about" />
 
-  <Navbar id="navbar" v-if="revele" />
+  <Navbar id="navbar" class="navbarr" v-if="revele" />
 
   <HardSkills id="hardskills" />
 
@@ -68,14 +68,19 @@ export default {
     },
     hiddenNavbar() {
       console.log(this.revele); 
-      const fadeEffect = document.querySelector('#navbar')
+      const navbarDisplay = document.querySelector('.navbarr')
+      const aboutPage = document.querySelector('#about')
       
       window.addEventListener('scroll', () => { 
         const { scrollTop, clientHeight } = document.documentElement;
-        console.log(scrollTop, clientHeight);
+        const topElementToTopViewport = aboutPage.getBoundingClientRect().top
+        console.log({"topElement.." : topElementToTopViewport})
         if(scrollTop === 0 && this.revele === true){
           this.revele = false;
-
+        } 
+        
+        else if(topElementToTopViewport === 0){
+          navbarDisplay.classList.add('active');
         }
       });
 
@@ -87,21 +92,42 @@ export default {
 <style lang="scss">
 #home, #about, #hardskills, #experiences, #works, #contactme{
   height: 100vh;
-  @media (max-width: 776px ) {
+}
+
+#home{
+  @media (min-width: 280px) and (max-width: 420px){
+      height: 100vh;
+    }
+}
+#about, #hardskills, #experiences, #works, #contactme{
+  @media (min-width: 280px) and (max-width: 420px){
+      height: 100%;
+    }
+}
+#contactme{
+  @media (max-width: 768px){
     height: auto;
+    .row{
+      height: inherit;
+      overflow: hidden;
+    }
   }
 }
 .hdr-container {
   font-family: "Source Code Pro", monospace;
   display: grid;
-  @media (max-width: 776px) {
-    align-content: start;
-  }
+  justify-items: center;
+  align-content: stretch;
+  @media (min-width: 360px) and (max-width: 420px){
+      display: grid;
+      justify-content: center;
+    }
   .animation_name {
     align-items: center;
     align-self: flex-end;
-    @media (max-width: 776px){
-      align-self: flex-start;
+    @media (min-width: 768px) and (max-width: 1024px) {
+      display: grid;
+      justify-items: center;
     }
     .ico {
       text-align-last: center;
@@ -109,9 +135,15 @@ export default {
     }
     #letters {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       position: relative;
       font-size: 60px;
+      @media (min-width: 1600px) {
+        font-size: 80px;
+      }
+      @media (min-width: 1920px) {
+        font-size: 100px;
+      }
     }
     .nameC {
       right: -45%;
@@ -136,7 +168,7 @@ export default {
     .lastName {
       opacity: 0;
       text-align-last: center;
-      letter-spacing: 25px;
+      letter-spacing: 18px;
       @media (max-width: 776px){
         letter-spacing: 0px;
       }
@@ -146,11 +178,25 @@ export default {
     text-align-last: center;
     align-self: flex-end;
     font-size: 90px;
+    @media (min-width: 280px){
+      padding-bottom: 20px;
+    }
+    @media (min-width: 1280px) {
+        font-size: 100px;
+      }
+    @media (min-width: 1600px) {
+        font-size: 150px;
+      }
+    a{
+      width: auto;
+      margin: auto;
+    }
   }
 }
 #navbar {
   z-index: 1;
   animation: fadein 2s;
+  opacity: 1;
 }
 
 
@@ -183,8 +229,11 @@ export default {
 .animation_name > .ico {
   animation: reducePoint 1000ms forwards;
   animation-delay: 1.5s;
-}
+  @media (min-width: 1600px) {
+    animation: reducePointFULLHD 1000ms forwards;
 
+  }
+}
 .animation_name > .lastName {
   animation: apparitionLname 5000ms forwards;
   animation-delay: 1.5s;
@@ -206,6 +255,15 @@ export default {
   100% {
     font-size: 100px;
   }
+}
+
+@keyframes reducePointFULLHD {
+  0% {
+    font-size: 220px;
+  }
+  100% {
+    font-size: 160px;
+}
 }
 
 @keyframes apparitionLname {

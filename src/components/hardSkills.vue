@@ -1,6 +1,6 @@
 <template>
     <div id="hardskills" class="row hardskills-container">
-      <div class="col" id="skills">
+      <div class="row" id="skills">
         <div class="row development bloc-1">
           <div class="col-md-4 code-icon icon-1">
             <i id="icon1-color" class="bi bi-code"></i>
@@ -82,20 +82,25 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .hardskills-container {
   align-content: center;
-  padding: 30px 30px 0px 30px;
+  padding: 30px 50px 0px 50px;
   @media (max-width: 776px) {
     padding: 0px;
   }
 }
 #skills {
+  height: 100%;
+  margin: 10px;
   #icon1-color {
     color: #396CF1;
   }
   #icon2-color {
     color: #f89b3b;
+    i{
+      font-size: 70px;
+    }
   }
   #icon3-color {
     color: #F853B8;
@@ -110,7 +115,6 @@ export default {
       padding: 15px;
       background: #F8F8F8;
       border-radius: 10px;
-      height: 60%;
       align-self: center;
       h5,h4 {
         font-weight: bold;
@@ -161,6 +165,7 @@ export default {
 }
 .arrow {
   text-align: center;
+  align-content: center;
   margin-top: -10px;
   a {
     &:hover {
@@ -170,6 +175,9 @@ export default {
       font-size: 50px;
       &:hover {
         background-color: hsla(160, 100%, 37%, 0.2);
+      }
+      @media (min-width: 1600px){
+        font-size: 100px;
       }
     }
   }

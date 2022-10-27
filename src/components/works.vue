@@ -12,10 +12,6 @@
           </p>
         </div>
 
-        <div type="" class="arrow">
-          <a href="#contactme"><i class="bi bi-caret-down"></i></a>
-        </div>
-
       </div>
 
       <!-- Projects Bloc -->
@@ -160,6 +156,7 @@
 
             </div>
             
+            
           </div>
 
           <!--Btn preview/next-->
@@ -175,6 +172,10 @@
 
       </div>
 
+
+      <div type="" class="arrow">
+          <a href="#contactme"><i class="bi bi-caret-down"></i></a>
+        </div>
     </div>
   </div>
 </template>
@@ -200,13 +201,25 @@ export default {
     align-self: center;
     align-items: center;
     width: 100vw;
+    margin: auto 15px;
+    .about-projects{
+      @media (max-width: 780px) {
+      padding-top: 60px;
+    }
+    }
     .content-projects{
       p{
         font-weight: bold;
+        @media (max-width: 768px) {
+          font-size: small;
+        }
       }
     }
     .projects{
       height: 85vh;
+      @media (max-width: 780px) {
+        height: auto;
+      }
       #horizontalCarousel{
         height: 100%;
         .carousel-inner.horizontal{
@@ -217,6 +230,22 @@ export default {
               width: 80%;
               height: 85vh;
               margin: auto;
+              @media (max-width: 768px) {
+                display: grid;
+                justify-items: center;
+                align-items: flex-start;
+                height: fit-content;
+                .col-carousel, .col-about-project{
+                  width: 100%;
+                }
+                .col-about-project{
+                  @media (max-width: 780px) {
+                    .title-project{
+                      text-align-last: justify;
+                    }
+                  }
+                }
+              }
               h6{
                 font-weight: bold;
                 font-size: 25px;
@@ -229,6 +258,9 @@ export default {
                 p{
                   margin-bottom: -20px;
                   font-size: 30px;
+                  @media (max-width: 780px) {
+                    font-size: 20px
+                  }
                 }
                 i{
                   font-size: 40px;
@@ -236,15 +268,54 @@ export default {
               }
             }
           }
+          
         }
-        .carousel-indicators{
-          margin-bottom: 0px;
+        button{
+          @media (max-width: 780px) {
+            height: 60%;
+          }
         }
       }
       #verticalCarousel{
             border: 35px rosybrown solid;
             overflow: hidden;
-            height: 66vh;
+            height: 415px;
+            @media (max-width: 1020px){
+              height: 300px;
+              border: 10px rosybrown solid;
+            }
+            @media (min-width: 1023px){
+              height: 325px;
+              border: 10px rosybrown solid;
+            }
+            @media (min-width: 1280px){
+              height: 425px;
+              border: 10px rosybrown solid;
+            }
+            @media (min-width: 1600px){
+              height: 480px;
+              border: 35px rosybrown solid;
+            }
+            @media (min-width: 1680px){
+              height: 492px;
+              border: 35px rosybrown solid;
+            }
+            @media (min-width: 1920px){
+              height: 567px;
+              border: 35px rosybrown solid;
+            }
+            @media (max-width: 280px){
+              height: 225px;
+              border: 10px rosybrown solid;
+            }
+            @media (min-width: 320px) and (max-width: 375px) {
+              height: 305px;
+              border: 10px rosybrown solid;
+            }
+            @media (min-width: 390px) and (max-width: 420px) {
+              height: 330px;
+              border: 10px rosybrown solid;
+            }
             figure{
               position: relative;
               width: 100%;
@@ -252,7 +323,14 @@ export default {
               top: 0;
               text-align: center;
               animation: 15s slidy infinite; 
-             
+              @media (min-width: 280px) and (max-width: 1023px){
+                animation: none;
+                img{
+                display: none;
+                }
+                img:nth-child(1) { display: block}
+              }
+
             }
         }
         @keyframes slidy {

@@ -14,13 +14,15 @@ export default {
 html {
   height: 100%;
   overflow-x: hidden;
-}
-body {
-  min-height: 100%;
-  width: 100%;
-}
-#app {
-  font-family: "Source Code Pro", monospace;
-  width: 100%;
+  body {
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    #app {
+      font-family: "Source Code Pro", monospace;
+      max-width: 95vw;
+      padding: 0;
+    }
+  }
 }
 </style>

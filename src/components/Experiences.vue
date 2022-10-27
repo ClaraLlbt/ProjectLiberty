@@ -190,7 +190,7 @@
       <div class="col-md-3 jobs-icon"><i class="bi bi-briefcase-fill"></i></div>
       </div>
 
-      <div class="row ">
+      <div class="row row-arrow">
         <div type="" class="arrow">
           <a href="#works"><i class="bi bi-caret-down"></i></a>
         </div>
@@ -248,10 +248,15 @@
       height: 100vh;
   }
   .global-row{
-    align-content: space-around;
     @media (max-width: 776px) {
       padding: 0;
       margin: auto;
+    }
+    @media (min-width: 1600px){
+      padding: 0px 60px 0px 60px;
+    }
+    @media (min-width: 1680px){
+      padding: 0px 85px 0px 85px;
     }
     .certificate-icon, .jobs-icon{
       font-size: 100px;
@@ -259,8 +264,12 @@
       &:hover{
         color: #DEBEBE;
       }
+      @media (max-width: 768px) {
+          font-size: 70px;
+        }
     }
     .certificate, .jobs{
+      align-content: flex-end;
       @media (max-width: 776px) {
         padding: 0;
         margin: 0;
@@ -325,6 +334,11 @@
       }
     }
     .certificate{
+      .certificate-icon{
+        @media (max-width: 768px) {
+          padding-top: 25px;
+        }
+      }
     .cards-design{
       .card{
         background: #2C3E50;
@@ -382,6 +396,8 @@
   }
 
   }
+  .row-arrow{
+    align-content:center;
   .arrow {
   text-align: center;
   margin-top: -10px;
@@ -394,8 +410,12 @@
       &:hover {
         background-color: hsla(160, 100%, 37%, 0.2);
       }
+      @media (min-width: 1600px){
+        font-size: 100px;
+      }
     }
   }
+}
 }
 }
 </style>
