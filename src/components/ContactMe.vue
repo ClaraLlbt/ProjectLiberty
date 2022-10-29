@@ -20,19 +20,19 @@
 
                 <div class="col-12 col-md-4 content-form form-slide" id="form-slide">
                 <div class="contact-form">
-                    <form action="">
+                    <form id="form" action="">
                         <h4>Formulaire de contact</h4>
                         <div>
-                            <label for="exampleInputEmail1" class="form-label">Email:</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <label for="reply_to" class="form-label">Email:</label>
+                            <input  v-model="email" type="email" class="form-control" id="reply_to" name="reply_to" placeholder="Laissez moi votre Email" aria-describedby="emailHelp">
                         </div>
                         <div>
-                            <label for="exampleFormControlTextarea1" class="form-label">Votre message:</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label for="message" class="form-label">Votre message:</label>
+                            <textarea v-model="message" class="form-control" id="message" name="message" rows="3" placeholder="Je serai ravie de prendre contact avec vous..."></textarea>
                         </div>
                         
-                        <div class="button">
-                            <button class="btn btn-light">Envoyer</button>
+                        <div class="button" >
+                            <button id="sendBtn" @click="sendEmail()" type="submit" value="Send Email" class="btn btn-light">Envoyer</button>
                         </div>
                     </form>
                 </div>
@@ -43,10 +43,17 @@
 </template>
 
 <script>
-    import ComponentWithMap from './GoogleMaps.vue'
+import emailjs from "emailjs-com"
+import ComponentWithMap from './GoogleMaps.vue'
 
     export default {
         name: "contactMe",
+        data(){
+            return {
+                email: "",
+                message: "",
+            }
+        },
         components: {
             ComponentWithMap,
         },
@@ -55,11 +62,32 @@
                 const btn = document.querySelector('.btn')
                 const slide = document.querySelector('.form-slide');
                 if(btn.click){
-                    console.log('hello');
                     slide.classList.add('activeBtn')
-                }
-                
-        }
+                }     
+            }, 
+            sendEmail() {
+                const btn = document.getElementById('sendBtn');
+
+                document.getElementById('form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    btn.innerText = "En cours..."
+
+                    const serviceID = 'service_696tmpa';
+                    const templateID = 'template_bhiwqld';
+                    const userId = 'OkYb3_3x2XbgyN8aT';
+   
+                    emailjs.sendForm(serviceID, templateID, this ,userId, {
+                        email: this.email,
+                        message: this.message
+                    }) .then(() => {
+                        btn.innerText = 'Email Envoyé';
+                        window.location.reload()
+                    }, (err) => {
+                        btn.innerText = 'Une erreur est survenue';
+                    });
+                });
+            },
         },
      
     }
@@ -91,8 +119,9 @@
                 color: white;
                 padding: 30px;
                 @media (max-width: 776px) {
-                        height: 100vh;
-                    }
+                    height: 100vh;
+                    margin-top: 35px;
+                }
                 .title-contact{
                     margin-bottom: 50px;
                     font-size: 20px;
@@ -157,7 +186,7 @@
                     transform: translateX(435px);
                 }
                 @media (max-width: 776px) {
-                    transform: matrix(1, 0, 0, 1, 0, -405);
+                    transform: matrix(1, 0, 0, 1, 0, -600);
                     opacity: 1;
                 }
                 

@@ -21,7 +21,9 @@ html {
     #app {
       font-family: "Source Code Pro", monospace;
       max-width: 95vw;
-      padding: 0;
+      @media (max-width: 1024px ){
+        padding: 0;
+      }
     }
   }
 }

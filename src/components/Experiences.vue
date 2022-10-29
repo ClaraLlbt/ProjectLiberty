@@ -23,7 +23,7 @@
               </div>
               <div class="col card-details">
                 <div class="dropup-center dropup">
-                  <button class="btn btn-secondary dropdown-menu-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button class="btn btn-light dropdown-menu-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                   </button>
                   <ul class="dropdown-menu">
                     <div class="show">
@@ -52,7 +52,7 @@
               </div>
               <div class="col card-details">
                 <div class="dropup-center dropup">
-                  <button class="btn btn-secondary dropdown-menu-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button class="btn btn-light dropdown-menu-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                   </button>
                   <ul class="dropdown-menu">
                     <div class="show">
@@ -81,7 +81,7 @@
               </div>
               <div class="col card-details">
                 <div class="dropup-center dropup">
-                  <button class="btn dropdown-menu-btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button class="btn dropdown-menu-btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                   </button>
                   <ul class="dropdown-menu">
                     <div class="show">
@@ -115,7 +115,7 @@
             </div>
             <div class="col card-details">
                 <div class="dropup-center dropup">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                   </button>
                   <ul class="dropdown-menu">
                     <div class="show">
@@ -144,7 +144,7 @@
             </div>
             <div class="col card-details">
                 <div class="dropup-center dropup">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                   </button>
                   <ul class="dropdown-menu">
                     <div class="show">
@@ -172,7 +172,7 @@
             </div>
             <div class="col card-details">
                 <div class="dropup-center dropup">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                   </button>
                   <ul class="dropdown-menu">
                     <div class="show">
@@ -277,7 +277,6 @@
       .cards-design{
         align-content: baseline;
         .card{
-          color: white;
           @media (max-width: 776px) {
             margin-bottom: 15px;
           }
@@ -341,9 +340,8 @@
       }
     .cards-design{
       .card{
-        background: #2C3E50;
+        background: #F8F8F8;
         .card-header{
-          background: #4A5B71;
           border-radius: 0px 0px 235px;
           text-align-last: start;
         }
@@ -356,9 +354,8 @@
     }
     .cards-design{
       .card{
-        background: #4A5B71;
+        background: #F8F8F8;
         .card-header{
-          background: #2C3E50;
           border-radius: 0px 0px 0px 235px;
           text-align-last: end;
         }
@@ -366,9 +363,6 @@
           p{
             font-size: small;
           }
-        }
-        .card-footer{
-          background: #2C3E50;
         }
       }
     }

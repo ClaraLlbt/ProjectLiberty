@@ -32,14 +32,26 @@
     <div class="col-6 hobbies-ico">
       <div class="hobbies-container">
           <div class="row hobbies-icons">
-            <div class="col-2 icon-1"><i class="bi bi-brush"></i></div>
-            <div class="col-2 icon-2"><i class="bi bi-tools"></i></div>
+            <div class="col-2 icon-1 bubbletitle"><i class="bi bi-brush"></i>
+              <span>Painting</span>
+            </div>
+            <div class="col-2 icon-2 bubbletitle"><i class="bi bi-tools"></i>
+              <span>Do-It-Yourself</span>
+            </div>
               
-            <div class="col-2 icon-3"><i class="bi bi-tree"></i></div>
-            <div class="col-2 icon-4"><i class="bi bi-flower1"></i></div>
+            <div class="col-2 icon-3 bubbletitle"><i class="bi bi-cup-hot"></i>
+              <span>Coffee Lover</span>
+            </div>
+            <div  class="col-2 icon-4 bubbletitle"><i class="bi bi-flower1"></i>
+              <span>Plant Lover</span>
+            </div>
               
-            <div class="col-2 icon-5"><i class="bi bi-code-slash"></i></div>
-            <div class="col-2 icon-6"><i class="bi bi-controller"></i></div>
+            <div class="col-2 icon-5 bubbletitle"><i class="bi bi-code-slash"></i>
+              <span>Coding</span>
+            </div>
+            <div class="col-2 icon-6 bubbletitle"><i class="bi bi-controller"></i>
+              <span>Video Games</span>
+            </div>
           </div>
         </div>
     </div>
@@ -177,8 +189,28 @@
         padding: 13px;
         div{
           filter:brightness(0.5);
+          span{
+            border-radius: 5px;
+            display: none;
+            z-index: 2;
+            background: #e7a1b5;
+            left: 0;
+            margin: 15px;
+            width: 120%;
+            position: absolute;
+            top: -40px;
+            text-decoration: none;
+            font-size: 12px;
+            color: white;
+            font-weight: bold;
+          }
           &:hover{
             filter: none;
+            cursor: help;
+            position: relative;
+            span{
+              display: block;
+            }
           }
         }
         .icon-1, .icon-3, .icon-5{

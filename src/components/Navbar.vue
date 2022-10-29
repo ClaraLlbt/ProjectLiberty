@@ -47,7 +47,7 @@ export default {
 
 <style lang="scss">
 .navbar {
-  width: 6%;
+  width: 50px;
   position: fixed;
   top: 30vh;
   left: 0;
@@ -59,6 +59,7 @@ export default {
   }
   .container {
     text-align-last: center;
+    padding: 0;
     .navbar-nav{
       background: #F8F8F8;
       display: grid;

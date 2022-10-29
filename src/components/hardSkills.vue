@@ -39,7 +39,7 @@
 
         <div class="row development bloc-3">
           <div class="col-md-4 code-icon" id="icon3-color">
-            <i class="bi bi-code"></i>
+            <i class="bi bi-pc-display"></i>
           </div>
           <div class="col-md-8 dev-skills">
             <h4 id="icon3-color">Environnement de travail</h4>
@@ -104,7 +104,10 @@ export default {
   }
   #icon3-color {
     color: #F853B8;
+    i{
+      font-size: 70px;
   }
+}
   .development {
     .code-icon {
       align-self: center;

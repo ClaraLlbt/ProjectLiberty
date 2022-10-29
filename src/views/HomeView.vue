@@ -74,7 +74,7 @@ export default {
       window.addEventListener('scroll', () => { 
         const { scrollTop, clientHeight } = document.documentElement;
         const topElementToTopViewport = aboutPage.getBoundingClientRect().top
-        console.log({"topElement.." : topElementToTopViewport})
+        // console.log({"topElement.." : topElementToTopViewport})
         if(scrollTop === 0 && this.revele === true){
           this.revele = false;
         } 
@@ -179,7 +179,7 @@ export default {
     align-self: flex-end;
     font-size: 90px;
     @media (min-width: 280px){
-      padding-bottom: 20px;
+      padding-bottom: 35px;
     }
     @media (min-width: 1280px) {
         font-size: 100px;
