@@ -5,6 +5,16 @@
       <div class="image-profile">
         <img src="../assets/images/chibi.png" alt="">        
       </div>
+      <div class="row networks-icons">
+        <div class="col-4 instagram-icon">
+          <a href="https://www.instagram.com/kala__ikebana/"><i class="bi bi-instagram"></i></a>
+          <span>Instagram</span>
+        </div>
+        <div class="col-4 linked-icon">
+          <a href="https://www.linkedin.com/in/chltc"><i class="bi bi-linkedin"></i></a>
+          <span>LinkedIn</span>
+        </div>
+      </div>
       </div>
       <div class="col-md-6 presentation">
         <h2 id="animate_text"> Hey, je m'appelle Clara et je suis Développeur web Junior</h2>
@@ -116,6 +126,40 @@
           width: 85%;
         }
       }
+      .networks-icons{
+        font-size: 40px;
+        justify-content: center;
+        div{
+          a{
+            &:hover{
+              background: none;
+            }
+          }
+          span{
+            border-radius: 5px;
+            display: none;
+            z-index: 2;
+            background: #e7a1b5;
+            left: 45px;
+            margin: 15px;
+            width: 40%;
+            position: absolute;
+            top: -40px;
+            text-decoration: none;
+            font-size: 12px;
+            color: white;
+            font-weight: bold;
+          }
+          &:hover{
+            filter: none;
+            cursor: help;
+            position: relative;
+            span{
+              display: block;
+            }
+          }
+        }
+      }
     }
     .presentation{
       padding: 20px;
@@ -164,6 +208,7 @@
       justify-items: center;
     }
     .btn, .hobbies-ico{
+      align-self: center;
       @media (max-width: 768px) {
         width: 100%;
       }

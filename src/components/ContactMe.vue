@@ -12,6 +12,9 @@
                     <div class="details-contact">
                         <p><i class="bi bi-phone"></i>  06 19 04 02 19</p>
                         <p><i class="bi bi-envelope"></i>  Chltpro@gmail.com</p>
+                        <a href="public\lib\web\CV_HAULTCOEUR_CLARA.pdf" download>
+                            <button type="button" class="btn btn-light"><i class="bi bi-file-pdf"></i> Télécharger mon CV</button>
+                        </a>
                     </div>
                     <div class="btn">
                         <button id="btn" @click="SlideFormContact" type="button" class="btn btn-light">Formulaire de contact</button>
@@ -19,6 +22,11 @@
                 </div>
 
                 <div class="col-12 col-md-4 content-form form-slide" id="form-slide">
+                    <div class="btn-close-form">
+                        <button type="button" class="btn close-btn" @click="deactivateFormContact">
+                            <i class="bi bi-x-circle"></i>
+                        </button>
+                    </div>
                 <div class="contact-form">
                     <form id="form" action="">
                         <h4>Formulaire de contact</h4>
@@ -28,7 +36,7 @@
                         </div>
                         <div>
                             <label for="message" class="form-label">Votre message:</label>
-                            <textarea v-model="message" class="form-control" id="message" name="message" rows="3" placeholder="Je serai ravie de prendre contact avec vous..."></textarea>
+                            <textarea v-model="message" class="form-control" id="message" name="message" rows="3" placeholder="Je serais ravie de prendre contact avec vous..."></textarea>
                         </div>
                         
                         <div class="button" >
@@ -57,6 +65,9 @@ import ComponentWithMap from './GoogleMaps.vue'
         components: {
             ComponentWithMap,
         },
+        mounted(){
+            this.downloadCV()
+        },
         methods: {
             SlideFormContact(){
                 const btn = document.querySelector('.btn')
@@ -65,6 +76,11 @@ import ComponentWithMap from './GoogleMaps.vue'
                     slide.classList.add('activeBtn')
                 }     
             }, 
+            deactivateFormContact(){
+                const xBtn = document.querySelector('.close-btn');
+                const slide = document.querySelector('.form-slide');
+                xBtn.click = slide.classList.add('deactiveBtn')
+            },
             sendEmail() {
                 const btn = document.getElementById('sendBtn');
 
@@ -88,6 +104,9 @@ import ComponentWithMap from './GoogleMaps.vue'
                     });
                 });
             },
+            downloadCV(){
+             console.log('hello');   
+            }
         },
      
     }
@@ -147,6 +166,15 @@ import ComponentWithMap from './GoogleMaps.vue'
                 height: 100vh;
                 display: grid;
                 align-content: center;
+                .btn-close-form{
+                    text-align: right;
+                    position: absolute;
+                    right: 0;
+                    padding: 10px;
+                    .btn{
+                        font-size: 35px;
+                    }
+                }
                 h4{
                     font-weight: bold;
                 }
@@ -172,6 +200,7 @@ import ComponentWithMap from './GoogleMaps.vue'
                 transition: transform 0.6s ease-in-out,
                 opacity 0.6s ease-in-out;
                 }
+
             }
             .form-slide.activeBtn{
                 transform: translateX(345px);
@@ -190,6 +219,18 @@ import ComponentWithMap from './GoogleMaps.vue'
                     opacity: 1;
                 }
                 
+            }
+            .form-slide.deactiveBtn{
+                transform: translateX(500px);
+                opacity: 0;
+                transition: transform 0.6s ease-in-out,
+                opacity 0.6s ease-in-out;
+                @media (max-width: 776px){
+                transform: matrix(1, 0, 0, 1, 0, 0);
+                opacity: 0;
+                transition: transform 0.6s ease-in-out,
+                opacity 0.6s ease-in-out;
+                }
             }
         }
     }
